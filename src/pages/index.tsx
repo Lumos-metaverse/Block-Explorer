@@ -2,53 +2,19 @@ import type { ReactElement } from 'react';
 import { Layout } from '~/components';
 import type { NextPageWithLayout } from './_app';
 
-import { create } from 'zustand';
-import { Button } from 'antd';
-import toast from 'react-hot-toast';
-import { PiCaretUpBold, PiCaretDownBold } from 'react-icons/pi';
+// Components
 
-interface HackathonWinsState {
-	wins: number;
-	increase: () => void;
-	decrease: () => void;
-}
-
-const useHackathon = create<HackathonWinsState>()((set) => ({
-	wins: 0,
-	increase: () => set((state) => ({ wins: state.wins + 1 })),
-	decrease: () =>
-		set((state) => {
-			if (state.wins !== 0) return { wins: state.wins - 1 };
-			return { wins: 0 };
-		}),
-}));
+import { LatestBlocks, LatestTransactions } from '~/components';
 
 const Home: NextPageWithLayout = () => {
-	const { wins, increase, decrease } = useHackathon();
 	return (
-		<div className='flex h-screen items-center justify-center p-24'>
-			<div className='flex flex-col items-center gap-4 text-center text-3xl font-bold sm:flex-row'>
-				<span className='bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent'>
-					Hackathon Wins
-				</span>
-				<span>🏆x {wins}</span>
-				<div className='flex flex-row gap-4 '>
-					<Button
-						icon={<PiCaretUpBold size={24} className='text-blue-400' />}
-						size='large'
-						onClick={() => {
-							increase();
-							toast.success('Hurray!', { icon: '😄' });
-						}}
-					/>
-					<Button
-						icon={<PiCaretDownBold size={24} className='text-blue-400' />}
-						size='large'
-						onClick={() => {
-							decrease();
-							toast.success('NVM!', { icon: '😢' });
-						}}
-					/>
+		<div className='m-24 border-2 p-16'>
+			<div className='flex flex-col gap-8 lg:flex-row'>
+				<div className='w-full basis-1/2'>
+					<LatestBlocks />
+				</div>
+				<div className='w-full basis-1/2'>
+					<LatestTransactions />
 				</div>
 			</div>
 		</div>

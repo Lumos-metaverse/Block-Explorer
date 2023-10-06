@@ -1,3 +1,5 @@
 import Layout from './layout';
+import LatestBlocks from './blocks';
+import LatestTransactions from './transactions';
 
-export { Layout };
+export { Layout, LatestBlocks, LatestTransactions };
