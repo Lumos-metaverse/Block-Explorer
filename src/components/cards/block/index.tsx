@@ -13,7 +13,6 @@ const BlockCard = ({
 	miner,
 	baseFeePerGas,
 }: Block) => {
-	console.log(baseFeePerGas);
 	return (
 		<div className='mt-2 flex flex-col gap-4'>
 			<div className='flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between'>
