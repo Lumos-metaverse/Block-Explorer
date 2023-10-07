@@ -1,6 +1,5 @@
 import React from 'react';
 import { AntDesignConfigProvider, NotificationProvider } from '~/providers';
-import { ThemeProvider } from 'next-themes';
 
 import clsx from 'clsx';
 import { Navbar, SEO } from '~/components/common';
@@ -15,17 +14,15 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
 	return (
-		<ThemeProvider attribute='class' enableSystem={false}>
-			<AntDesignConfigProvider>
-				<NotificationProvider>
-					<div className={clsx(inter.className)}>
-						<SEO />
-						<Navbar />
-						{children}
-					</div>
-				</NotificationProvider>
-			</AntDesignConfigProvider>
-		</ThemeProvider>
+		<AntDesignConfigProvider>
+			<NotificationProvider>
+				<div className={clsx(inter.className)}>
+					<SEO />
+					<Navbar />
+					{children}
+				</div>
+			</NotificationProvider>
+		</AntDesignConfigProvider>
 	);
 };
 
