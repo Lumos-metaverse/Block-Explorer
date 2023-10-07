@@ -46,7 +46,7 @@ const TransactionCard = ({
 				</div>
 
 				<div className='w-fit rounded-md bg-slate-200 px-2 py-[1px] text-xs text-gray-500'>
-					{(parseInt(value.toString()) / 10 ** 9).toFixed(4)} ETH
+					{(parseInt(value.toString()) / 10 ** 18).toFixed(5)} ETH
 				</div>
 			</div>
 			<div className='w-full border-t-[1px] border-gray-300' />
