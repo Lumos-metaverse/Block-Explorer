@@ -30,7 +30,6 @@
   "dependencies": {
     "@ant-design/cssinjs": "^1.17.0",
     "@t3-oss/env-nextjs": "^0.7.0",
-    "alchemy-sdk": "^2.10.1",
     "antd": "^5.9.4",
     "clsx": "^2.0.0",
     "next": "^13.5.4",
