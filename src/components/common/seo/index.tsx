@@ -3,23 +3,22 @@ import { NextSeo } from 'next-seo';
 const SEO = () => {
 	return (
 		<NextSeo
-			title='Web3 Hackathon Starter'
-			description='A opinionated starter template for building web3 applications with Next.js, Tailwind CSS, and thirdweb'
+			title='Beacon'
+			description='A simple Ethereum explorer built with viem'
 			openGraph={{
-				url: 'https://w3-starter.vercel.app',
-				title: 'Web3 Hackathon Starter',
-				description:
-					'A opinionated starter template for building web3 applications with Next.js, Tailwind CSS, and thirdweb',
+				url: 'https://block-explorer-viem.vercel.app',
+				title: 'Beacon',
+				description: 'A simple Ethereum explorer built with viem',
 				images: [
 					{
-						url: 'https://i.ibb.co/YhWLyTb/OG.png',
+						url: 'https://i.ibb.co/M6XyPGr/OG.png',
 						width: 1200,
 						height: 630,
-						alt: 'W3S OG Image',
+						alt: 'Beacon OG Image',
 						type: 'image/png',
 					},
 				],
-				siteName: 'Web3 Hackathon Starter',
+				siteName: 'Beacon',
 			}}
 			twitter={{
 				handle: '@Envoy_1084',

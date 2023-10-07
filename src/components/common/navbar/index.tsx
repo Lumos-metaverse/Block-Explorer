@@ -9,7 +9,7 @@ const Navbar = () => {
 			<div className='flex flex-row items-center justify-between'>
 				<div className='flex flex-row items-center gap-2'>
 					<PiPolygonBold className='text-primary text-4xl' />
-					<div className='hidden text-2xl font-bold sm:flex'>Polyscan</div>
+					<div className='hidden text-2xl font-bold sm:flex'>Beacon</div>
 				</div>
 			</div>
 		</div>
