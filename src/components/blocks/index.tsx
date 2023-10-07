@@ -1,34 +1,15 @@
 import React from 'react';
 import { Button } from 'antd';
-import { publicClient } from '~/providers/web3';
+import { useLatestBlocksStore } from '~/stores';
 
 // Components
-import { BlockCard } from '~/components/cards';
+import { BlockCard } from '../cards';
 
 // Icons
 import { PiCube } from 'react-icons/pi';
 
-// Types
-import type { Block } from 'viem';
-
 const LatestBlocks = () => {
-	const [blocks, setBlocks] = React.useState<Block[]>([]);
-
-	const unwatch = publicClient.watchBlocks({
-		blockTag: 'latest',
-		onError: (err) => console.log(err),
-		onBlock: (block) => onNewBlock(block),
-	});
-
-	const onNewBlock = (block: Block) => {
-		if (blocks.length < 10) {
-			const newBlocks = [block, ...blocks];
-			setBlocks(newBlocks);
-		} else {
-			const newBlocks = [block, ...blocks.slice(0, 5)];
-			setBlocks(newBlocks);
-		}
-	};
+	const { blocks } = useLatestBlocksStore();
 
 	return (
 		<div className='flex flex-col gap-2'>

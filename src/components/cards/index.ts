@@ -1,3 +1,4 @@
-import BlockCard from './cards/block';
+import BlockCard from './block';
+import TransactionCard from './transaction';
 
-export { BlockCard };
+export { BlockCard, TransactionCard };
