@@ -8,7 +8,7 @@ import { LatestBlocks, LatestTransactions } from '~/components';
 
 const Home: NextPageWithLayout = () => {
 	return (
-		<div className='m-24 border-2 p-16'>
+		<div className='my-24 p-4 max-w-screen-2xl mx-auto'>
 			<div className='flex flex-col gap-8 lg:flex-row'>
 				<div className='w-full basis-1/2'>
 					<LatestBlocks />
