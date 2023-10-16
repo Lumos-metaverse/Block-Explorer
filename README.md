@@ -13,7 +13,7 @@ To get started with the Beacon, follow these simple steps:
 1. Clone the Repository: Begin by cloning the repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/Envoy-VC/blockchain-explorer.git
+   git clone https://github.com/Lumos-metaverse/Block-Explorer.git
    ```
 
 2. Install Dependencies: Navigate to the cloned repository and install the required dependencies by running the following command:

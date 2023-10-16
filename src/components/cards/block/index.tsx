@@ -3,7 +3,7 @@ import React from 'react';
 import type { Block } from 'viem';
 
 // Helpers
-import { getTimeAgo } from '~/utils';
+import { getTimeAgo } from '~/helpers';
 
 const BlockCard = ({
 	number,

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
-s
 interface Props {
 	children: React.ReactNode;
 }
