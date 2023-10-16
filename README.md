@@ -2,7 +2,7 @@
 
 Beacon is a simple Ethereum explorer built with viem. It provides real-time updates by using viem's watch block function to track new blocks and update the interface instantly.
 
-![Homepage](./public/home.png)
+![Homepage](./public/OG.png)
 
 This project was bootstrapped using [create-t3-app]()
 
